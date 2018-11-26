@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+
+
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        double tt = 0;
+        double nn1 = Convert.ToDouble(n1.SelectedItem.Value);
+        double nn2 = Convert.ToDouble(n2.Text);
+        double nn3 = Convert.ToDouble(n3.Text);
+        double pp1 = Convert.ToDouble(p1.SelectedItem.Value);
+        double pp2 = Convert.ToDouble(p2.Text);
+        double pp3 = Convert.ToDouble(p3.Text);
+        l2.Text = "";
+
+        if (c1.Checked)
+            tt += nn1 * pp1;
+
+        if (c2.Checked)
+            tt += nn2 * pp2;
+
+        if (c3.Checked)
+            tt += nn2 * pp2;
+
+        t.Text = Convert.ToString(tt);
+
+
+
+        if (r1.SelectedValue == "0")
+            l1.Text = r1.SelectedItem.Text;
+
+        if (r1.SelectedValue == "1")
+            l1.Text = r1.SelectedItem.Text;
+
+        if (r1.SelectedValue == "2")
+            l1.Text = r1.SelectedItem.Text;
+
+        if (r1.SelectedValue == "3")
+            l1.Text = r1.SelectedItem.Text;
+
+        if (r1.SelectedValue == "4")
+            l1.Text = r1.SelectedItem.Text;
+
+        if (r1.SelectedValue == "5")
+            l1.Text = r1.SelectedItem.Text;
+
+
+        if (LB.Items[0].Selected)
+            l2.Text += LB.Items[0].Text;
+
+        if (LB.Items[1].Selected)
+            l2.Text += LB.Items[1].Text;
+
+        if (LB.Items[2].Selected)
+            l2.Text += LB.Items[2].Text;
+
+    }
+
+
+}
